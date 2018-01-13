@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rome Total War", "Rome Total War\Rome Total War.csproj", "{AFA32040-31F0-45CE-9F23-47E7D5E5B9FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFA32040-31F0-45CE-9F23-47E7D5E5B9FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA32040-31F0-45CE-9F23-47E7D5E5B9FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA32040-31F0-45CE-9F23-47E7D5E5B9FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA32040-31F0-45CE-9F23-47E7D5E5B9FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
