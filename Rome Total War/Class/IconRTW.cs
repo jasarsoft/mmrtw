@@ -16,10 +16,26 @@ namespace Jasarsoft.ModManager.RomeTotalWar
             public const string pngRTWALX = "rtwalx.png";
         }
 
-        private struct ImageSize
+        private struct IconSize
         {
             public const int pngWidth = 48;
             public const int pngHeight = 48;
+        }
+
+
+        public string NameRTW
+        {
+            get { return iconPath + IconName.pngRTW; }
+        }
+
+        public string NameRTWBI
+        {
+            get { return iconPath + IconName.pngRTWBI; }
+        }
+
+        public string NameRTWALX
+        {
+            get { return iconPath + IconName.pngRTWALX; }
         }
 
 
@@ -29,7 +45,7 @@ namespace Jasarsoft.ModManager.RomeTotalWar
             if(File.Exists(fileName))
             {
                 Image pngImage = Image.FromFile(fileName);
-                if (pngImage.Width == ImageSize.pngWidth && pngImage.Height == ImageSize.pngHeight)
+                if (pngImage.Width == IconSize.pngWidth && pngImage.Height == IconSize.pngHeight)
                     if (pngImage.RawFormat.Equals(ImageFormat.Png))
                         return true;
             }
