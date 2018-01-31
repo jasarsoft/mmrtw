@@ -1,4 +1,4 @@
-﻿namespace Jasarsoft.ModManager.RTW
+﻿namespace Jasarsoft.ModManager.RomeTotalWar
 {
     partial class formMain
     {
@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Title", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))))}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Europa Barbarorum", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))))}, -1);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Author", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))))}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "http://www.europabarbarorum.com/", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))))}, -1);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Version", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F))}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1.2", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F))}, -1);
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
             new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Platform", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F))}, -1);
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "test", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 8.25F))}, -1);
             System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Platform Ver"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Arial", 8.25F));
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
@@ -63,13 +64,13 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.groupOptions = new System.Windows.Forms.GroupBox();
-            this.checkListOptions = new System.Windows.Forms.CheckedListBox();
-            this.groupModInfo = new System.Windows.Forms.GroupBox();
+            this.groupInfo = new System.Windows.Forms.GroupBox();
             this.listViewInfo = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupGameMod = new System.Windows.Forms.GroupBox();
+            this.groupOptions = new System.Windows.Forms.GroupBox();
+            this.checkListOptions = new System.Windows.Forms.CheckedListBox();
+            this.groupGame = new System.Windows.Forms.GroupBox();
             this.labelCampaign = new System.Windows.Forms.Label();
             this.comboCamaign = new System.Windows.Forms.ComboBox();
             this.comboMod = new System.Windows.Forms.ComboBox();
@@ -77,9 +78,9 @@
             this.comboGame = new System.Windows.Forms.ComboBox();
             this.labelGame = new System.Windows.Forms.Label();
             this.menuMain.SuspendLayout();
+            this.groupInfo.SuspendLayout();
             this.groupOptions.SuspendLayout();
-            this.groupModInfo.SuspendLayout();
-            this.groupGameMod.SuspendLayout();
+            this.groupGame.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuMain
@@ -93,7 +94,7 @@
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
             this.menuMain.Size = new System.Drawing.Size(586, 24);
-            this.menuMain.TabIndex = 0;
+            this.menuMain.TabIndex = 10;
             this.menuMain.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
@@ -129,45 +130,25 @@
             // buttonPlay
             // 
             this.buttonPlay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonPlay.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlay.Image")));
             this.buttonPlay.Location = new System.Drawing.Point(374, 235);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(200, 58);
-            this.buttonPlay.TabIndex = 15;
+            this.buttonPlay.TabIndex = 11;
             this.buttonPlay.Text = "  PLAY  MOD";
             this.buttonPlay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPlay.UseVisualStyleBackColor = true;
             // 
-            // groupOptions
+            // groupInfo
             // 
-            this.groupOptions.Controls.Add(this.checkListOptions);
-            this.groupOptions.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupOptions.Location = new System.Drawing.Point(374, 36);
-            this.groupOptions.Name = "groupOptions";
-            this.groupOptions.Size = new System.Drawing.Size(200, 193);
-            this.groupOptions.TabIndex = 14;
-            this.groupOptions.TabStop = false;
-            this.groupOptions.Text = "Options";
-            // 
-            // checkListOptions
-            // 
-            this.checkListOptions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkListOptions.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkListOptions.FormattingEnabled = true;
-            this.checkListOptions.Location = new System.Drawing.Point(3, 16);
-            this.checkListOptions.Name = "checkListOptions";
-            this.checkListOptions.Size = new System.Drawing.Size(194, 174);
-            this.checkListOptions.TabIndex = 0;
-            // 
-            // groupModInfo
-            // 
-            this.groupModInfo.Controls.Add(this.listViewInfo);
-            this.groupModInfo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupModInfo.Location = new System.Drawing.Point(12, 160);
-            this.groupModInfo.Name = "groupModInfo";
-            this.groupModInfo.Size = new System.Drawing.Size(356, 136);
-            this.groupModInfo.TabIndex = 13;
-            this.groupModInfo.TabStop = false;
-            this.groupModInfo.Text = "Mod Information";
+            this.groupInfo.Controls.Add(this.listViewInfo);
+            this.groupInfo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupInfo.Location = new System.Drawing.Point(12, 160);
+            this.groupInfo.Name = "groupInfo";
+            this.groupInfo.Size = new System.Drawing.Size(356, 136);
+            this.groupInfo.TabIndex = 2;
+            this.groupInfo.TabStop = false;
+            this.groupInfo.Text = "Mod Information";
             // 
             // listViewInfo
             // 
@@ -206,21 +187,42 @@
             this.columnHeader2.Text = "Text";
             this.columnHeader2.Width = 225;
             // 
-            // groupGameMod
+            // groupOptions
             // 
-            this.groupGameMod.Controls.Add(this.labelCampaign);
-            this.groupGameMod.Controls.Add(this.comboCamaign);
-            this.groupGameMod.Controls.Add(this.comboMod);
-            this.groupGameMod.Controls.Add(this.labelMod);
-            this.groupGameMod.Controls.Add(this.comboGame);
-            this.groupGameMod.Controls.Add(this.labelGame);
-            this.groupGameMod.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupGameMod.Location = new System.Drawing.Point(12, 36);
-            this.groupGameMod.Name = "groupGameMod";
-            this.groupGameMod.Size = new System.Drawing.Size(356, 118);
-            this.groupGameMod.TabIndex = 12;
-            this.groupGameMod.TabStop = false;
-            this.groupGameMod.Text = "Game Mod";
+            this.groupOptions.Controls.Add(this.checkListOptions);
+            this.groupOptions.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupOptions.Location = new System.Drawing.Point(374, 36);
+            this.groupOptions.Name = "groupOptions";
+            this.groupOptions.Size = new System.Drawing.Size(200, 193);
+            this.groupOptions.TabIndex = 3;
+            this.groupOptions.TabStop = false;
+            this.groupOptions.Text = "Options";
+            // 
+            // checkListOptions
+            // 
+            this.checkListOptions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkListOptions.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkListOptions.FormattingEnabled = true;
+            this.checkListOptions.Location = new System.Drawing.Point(3, 16);
+            this.checkListOptions.Name = "checkListOptions";
+            this.checkListOptions.Size = new System.Drawing.Size(194, 174);
+            this.checkListOptions.TabIndex = 0;
+            // 
+            // groupGame
+            // 
+            this.groupGame.Controls.Add(this.labelCampaign);
+            this.groupGame.Controls.Add(this.comboCamaign);
+            this.groupGame.Controls.Add(this.comboMod);
+            this.groupGame.Controls.Add(this.labelMod);
+            this.groupGame.Controls.Add(this.comboGame);
+            this.groupGame.Controls.Add(this.labelGame);
+            this.groupGame.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupGame.Location = new System.Drawing.Point(12, 36);
+            this.groupGame.Name = "groupGame";
+            this.groupGame.Size = new System.Drawing.Size(356, 118);
+            this.groupGame.TabIndex = 1;
+            this.groupGame.TabStop = false;
+            this.groupGame.Text = "Game Mod";
             // 
             // labelCampaign
             // 
@@ -267,10 +269,15 @@
             this.comboGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboGame.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboGame.FormattingEnabled = true;
+            this.comboGame.Items.AddRange(new object[] {
+            "Rome: Total War™",
+            "Rome: Total War™ - Barbarian Invasion",
+            "Rome: Total War™ - Alexander"});
             this.comboGame.Location = new System.Drawing.Point(101, 28);
             this.comboGame.Name = "comboGame";
             this.comboGame.Size = new System.Drawing.Size(240, 21);
             this.comboGame.TabIndex = 2;
+            this.comboGame.SelectedIndexChanged += new System.EventHandler(this.comboGame_SelectedIndexChanged);
             // 
             // labelGame
             // 
@@ -289,27 +296,28 @@
             this.ClientSize = new System.Drawing.Size(586, 305);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.groupOptions);
-            this.Controls.Add(this.groupModInfo);
-            this.Controls.Add(this.groupGameMod);
+            this.Controls.Add(this.groupInfo);
+            this.Controls.Add(this.groupGame);
             this.Controls.Add(this.menuMain);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuMain;
             this.MaximizeBox = false;
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mod Manager: Rome: Total War™";
+            this.Text = "Mod Manager: Rome Total War";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
+            this.groupInfo.ResumeLayout(false);
             this.groupOptions.ResumeLayout(false);
-            this.groupModInfo.ResumeLayout(false);
-            this.groupGameMod.ResumeLayout(false);
+            this.groupGame.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
         private System.Windows.Forms.MenuStrip menuMain;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -317,13 +325,13 @@
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button buttonPlay;
-        private System.Windows.Forms.GroupBox groupOptions;
-        private System.Windows.Forms.CheckedListBox checkListOptions;
-        private System.Windows.Forms.GroupBox groupModInfo;
+        private System.Windows.Forms.GroupBox groupInfo;
         private System.Windows.Forms.ListView listViewInfo;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.GroupBox groupGameMod;
+        private System.Windows.Forms.GroupBox groupOptions;
+        private System.Windows.Forms.CheckedListBox checkListOptions;
+        private System.Windows.Forms.GroupBox groupGame;
         private System.Windows.Forms.Label labelCampaign;
         private System.Windows.Forms.ComboBox comboCamaign;
         private System.Windows.Forms.ComboBox comboMod;
