@@ -13,9 +13,15 @@ namespace Jasarsoft.ModManager.RomeTotalWar
 {
     public partial class formMain : Form
     {
+        IconRTW icon;
+
         public formMain()
         {
             InitializeComponent();
+
+            buttonPlay.Image = null;
+
+            icon = new IconRTW();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -138,25 +144,25 @@ namespace Jasarsoft.ModManager.RomeTotalWar
 
         private void comboGame_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IconCheck icon = new IconCheck();
+            buttonPlay.Image = null;
             
-            if (comboGame.SelectedIndex == 0 && icon.CheckRTW())
-                buttonPlay.Image = Image.FromFile(icon.IconRTW);
-            if (comboGame.SelectedIndex == 1 && icon.CheckRTWBI())
-                buttonPlay.Image = Image.FromFile(icon.IconRTWBI);
-            if (comboGame.SelectedIndex == 2 && icon.CheckRTWALX())
-                buttonPlay.Image = Image.FromFile(icon.IconRTWALX);
+            switch (comboGame.SelectedIndex)
+            {
+                case 0: //RTW
+                    if (icon.CheckRTW())
+                        buttonPlay.Image = Image.FromFile(icon.NameRTW);
+                    break;
 
-            string path = System.IO.Directory.GetCurrentDirectory();
-            DirectoryInfo info = Directory.GetParent(path);
-            
-            
+                case 1: //RTW BI
+                    if (icon.CheckRTWBI())
+                        buttonPlay.Image = Image.FromFile(icon.NameRTWBI);
+                    break;
 
-            MessageBox.Show(info.FullName);
-        }
-
-        
-        
-        
+                case 2: //RTW ALX
+                    if (icon.CheckRTWALX())
+                        buttonPlay.Image = Image.FromFile(icon.NameRTWALX);
+                    break;
+            }
+        }   
     }
 }
